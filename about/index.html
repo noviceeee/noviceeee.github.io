@@ -6,21 +6,18 @@
     
 
     
-    <title>一条咸鱼游啊游</title>
+    <title>about | 一条咸鱼游啊游</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-    <meta name="description" content="做条有梦想的咸鱼，不要怂，就是干→_→">
-<meta property="og:type" content="website">
-<meta property="og:title" content="一条咸鱼游啊游">
+    <meta property="og:type" content="website">
+<meta property="og:title" content="about">
 <meta property="og:url" content="http://yoursite.com/about/index.html">
 <meta property="og:site_name" content="一条咸鱼游啊游">
-<meta property="og:description" content="做条有梦想的咸鱼，不要怂，就是干→_→">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-02-13T15:11:08.672Z">
+<meta property="og:updated_time" content="2019-02-14T07:11:56.422Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="一条咸鱼游啊游">
-<meta name="twitter:description" content="做条有梦想的咸鱼，不要怂，就是干→_→">
+<meta name="twitter:title" content="about">
     
 
     
@@ -80,18 +77,39 @@
                         <nav id="sub-nav">
                             <div id="search-form-wrap">
 
-    <form class="search-form" method="GET" action="https://www.baidu.com/s?">
-    <input name="wd" type="text" class="search-form-input" placeholder="搜索">
-</form>
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="搜索">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="想要查找什么...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
 <script>
-(function ($) {
-    $('.search-form').on('submit', function (e) {
-        var keyword = $('.search-form-input[name="wd"]').val();
-        window.location = 'https://www.baidu.com/s?wd=site:yoursite.com ' + keyword;
-        return false;
-    });
-})(jQuery);
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
 </script>
+<script src="/js/insight.js"></script>
 
 </div>
                         </nav>
@@ -108,7 +126,7 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    一条咸鱼游啊游
+    <em class="page-title-link" data-url="/about/index.html">about</em>
     </h1>
 </div>
 
@@ -116,19 +134,27 @@
                             <article id="page-" class="article article-single article-type-page" itemscope="" itemprop="blogPost">
     <div class="article-inner">
         
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        about
+        </h1>
+    
+
+            </header>
+        
         
         
         <div class="article-entry" itemprop="articleBody">
-            <hr>
-<p>做条有梦想的咸鱼，不要怂，就是干→_→</p>
-
+            
         </div>
         <footer class="article-footer">
             
 
 
 
-    <a data-url="http://yoursite.com/about/index.html" data-id="cjs486w210000bkv3fqk0bhs2" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://yoursite.com/about/index.html" data-id="cjs4ag2qc000134v30dfdf7rq" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -198,17 +224,15 @@
             "@type": "Person",
             "name": "noviceeee"
         },
-        
+        "headline": "about",
         "image": "http://yoursite.com",
         
         
-        "datePublished": "2019-02-13",
-        "dateCreated": "2019-02-13",
-        "dateModified": "2019-02-13",
+        "datePublished": "2019-02-14",
+        "dateCreated": "2019-02-14",
+        "dateModified": "2019-02-14",
         "url": "http://yoursite.com/about/index.html",
-        "description": "
-做条有梦想的咸鱼，不要怂，就是干→_→
-"
+        "description": ""
         "wordCount": 1
     }
 </script>
@@ -317,9 +341,23 @@
 
             
                 
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">标签</h3>
+        <div class="widget">
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/废话/">废话</a><span class="tag-list-count">1</span></li></ul>
+        </div>
+    </div>
+
 
             
                 
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">标签云</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/废话/" style="font-size: 10px;">废话</a>
+        </div>
+    </div>
+
 
             
                 
