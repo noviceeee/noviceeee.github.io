@@ -10,21 +10,21 @@
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-        <meta name="keywords" content="MySQL,问题">
+        <meta name="keywords" content="MySQL">
     
-    <meta name="description" content="方法一：学习表子查询时，根据教学视频的思路： 1.将学生按年龄从大到小排序，得到临时表2.对临时表按班级进行分组,保留每组第一个 好有道理的样子，然而我输入后： 看起来不是对排序后的临时表分组，而是对原表分组后选取每组第一条信息，也就是说子查询排序失效了 原因：MySQL5.6以上在子查询中使用order by 语句后查询结果并不会显示排序后的结果当子查询的order by语句后面没有limit">
-<meta name="keywords" content="MySQL,问题">
+    <meta name="description" content="方法一：1.将学生按年龄从大到小排序，得到临时表2.对临时表按班级进行分组,保留每组第一个  但是这个方法存在一个问题：每组只显示一条数据，没有考虑到有同龄人的情况 方法二：1.将学生按班级分组，并选出每组最大年龄，得到一张包含班级和该班最大年龄的临时表 2.用inner join连接临时表和学生表，由于表示班级和年龄的字段一样，用using">
+<meta name="keywords" content="MySQL">
 <meta property="og:type" content="article">
 <meta property="og:title" content="查询每个班中年龄最大的学生信息">
 <meta property="og:url" content="http://yoursite.com/2019/03/20/查询每个班中年龄最大的学生信息/index.html">
 <meta property="og:site_name" content="一条咸鱼游啊游">
-<meta property="og:description" content="方法一：学习表子查询时，根据教学视频的思路： 1.将学生按年龄从大到小排序，得到临时表2.对临时表按班级进行分组,保留每组第一个 好有道理的样子，然而我输入后： 看起来不是对排序后的临时表分组，而是对原表分组后选取每组第一条信息，也就是说子查询排序失效了 原因：MySQL5.6以上在子查询中使用order by 语句后查询结果并不会显示排序后的结果当子查询的order by语句后面没有limit">
+<meta property="og:description" content="方法一：1.将学生按年龄从大到小排序，得到临时表2.对临时表按班级进行分组,保留每组第一个  但是这个方法存在一个问题：每组只显示一条数据，没有考虑到有同龄人的情况 方法二：1.将学生按班级分组，并选出每组最大年龄，得到一张包含班级和该班最大年龄的临时表 2.用inner join连接临时表和学生表，由于表示班级和年龄的字段一样，用using">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://yoursite.com/2019/03/20/查询每个班中年龄最大的学生信息/stu.png">
-<meta property="og:updated_time" content="2019-03-20T12:31:13.765Z">
+<meta property="og:updated_time" content="2019-03-20T13:05:10.762Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="查询每个班中年龄最大的学生信息">
-<meta name="twitter:description" content="方法一：学习表子查询时，根据教学视频的思路： 1.将学生按年龄从大到小排序，得到临时表2.对临时表按班级进行分组,保留每组第一个 好有道理的样子，然而我输入后： 看起来不是对排序后的临时表分组，而是对原表分组后选取每组第一条信息，也就是说子查询排序失效了 原因：MySQL5.6以上在子查询中使用order by 语句后查询结果并不会显示排序后的结果当子查询的order by语句后面没有limit">
+<meta name="twitter:description" content="方法一：1.将学生按年龄从大到小排序，得到临时表2.对临时表按班级进行分组,保留每组第一个  但是这个方法存在一个问题：每组只显示一条数据，没有考虑到有同龄人的情况 方法二：1.将学生按班级分组，并选出每组最大年龄，得到一张包含班级和该班最大年龄的临时表 2.用inner join连接临时表和学生表，由于表示班级和年龄的字段一样，用using">
 <meta name="twitter:image" content="http://yoursite.com/2019/03/20/查询每个班中年龄最大的学生信息/stu.png">
     
 
@@ -168,7 +168,7 @@
                 
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/MySQL/">MySQL</a>, <a class="tag-link" href="/tags/问题/">问题</a>
+        <a class="tag-link" href="/tags/MySQL/">MySQL</a>
     </div>
 
             </div>	
@@ -176,15 +176,11 @@
         
         <div class="article-entry" itemprop="articleBody">
             <p><img src="/2019/03/20/查询每个班中年龄最大的学生信息/stu.png" alt="还是学生表stu"></p>
-<h3 id="方法一："><a href="#方法一：" class="headerlink" title="方法一："></a>方法一：</h3><p>学习表子查询时，根据教学视频的思路：</p>
-<p><strong>1.将学生按年龄从大到小排序，得到临时表</strong><br><strong>2.对临时表按班级进行分组,保留每组第一个</strong></p>
-<p>好有道理的样子，然而我输入后：</p>
-<p><img src="/2019/03/20/查询每个班中年龄最大的学生信息/result.png" alt="明显错误"><br>看起来不是对排序后的临时表分组，而是对原表分组后选取每组第一条信息，也就是说子查询排序失效了</p>
-<p><img src="/2019/03/20/查询每个班中年龄最大的学生信息/try.png" alt="对原表进行操作"><br><strong>原因：</strong><br>MySQL5.6以上在子查询中使用order by 语句后查询结果并不会显示排序后的结果<br>当子查询的order by语句后面没有limit关键字时，数据库会自动优化，即忽略order by语句</p>
-<p><strong>解决方法：
-</strong>添加limit关键字</p>
-<p><img src="/2019/03/20/查询每个班中年龄最大的学生信息/result2.png" alt="限制的数据量大于总数据量"><br> 但是这个方法存在另一个问题：每个班只能显示一条数据，没有考虑到同龄人的情况</p>
-<h3 id="方法二："><a href="#方法二：" class="headerlink" title="方法二："></a>方法二：</h3><p><strong>1.将学生按班级分组，并选出每组最大年龄，得到一张包含班级和该班最大年龄的临时表</strong><br><img src="/2019/03/20/查询每个班中年龄最大的学生信息/temp.png" alt="临时表temp"><br><strong>2.用inner join连接临时表和学生表，由于表示班级和年龄的字段一样，用using</strong><br><img src="/2019/03/20/查询每个班中年龄最大的学生信息/result3.png" alt="正确的查询结果"></p>
+<h3 id="方法一："><a href="#方法一：" class="headerlink" title="方法一："></a>方法一：</h3><p><strong>1.将学生按年龄从大到小排序，得到临时表</strong><br><strong>2.对临时表按班级进行分组,保留每组第一个</strong></p>
+<p><img src="/2019/03/20/查询每个班中年龄最大的学生信息/result2.png" alt=""><br> 但是这个方法存在一个问题：每组只显示一条数据，没有考虑到有同龄人的情况</p>
+<h3 id="方法二："><a href="#方法二：" class="headerlink" title="方法二："></a>方法二：</h3><p><strong>1.将学生按班级分组，并选出每组最大年龄，得到一张包含班级和该班最大年龄的临时表</strong></p>
+<p><img src="/2019/03/20/查询每个班中年龄最大的学生信息/temp.png" alt="临时表temp"><br><strong>2.用inner join连接临时表和学生表，由于表示班级和年龄的字段一样，用using</strong></p>
+<p><img src="/2019/03/20/查询每个班中年龄最大的学生信息/result3.png" alt="正确的查询结果"></p>
 
         </div>
         <footer class="article-footer">
@@ -192,7 +188,7 @@
 
 
 
-    <a data-url="http://yoursite.com/2019/03/20/查询每个班中年龄最大的学生信息/" data-id="cjth6x0gv00057ov31wxiqolh" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://yoursite.com/2019/03/20/查询每个班中年龄最大的学生信息/" data-id="cjth8bplp0007pwv31sw7jyke" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -264,19 +260,20 @@
         },
         "headline": "查询每个班中年龄最大的学生信息",
         "image": "http://yoursite.com/2019/03/20/查询每个班中年龄最大的学生信息/stu.png",
-        "keywords": "MySQL 问题",
+        "keywords": "MySQL",
         "genre": "技术 MySQL",
         "datePublished": "2019-03-20",
         "dateCreated": "2019-03-20",
         "dateModified": "2019-03-20",
         "url": "http://yoursite.com/2019/03/20/查询每个班中年龄最大的学生信息/",
         "description": "
-方法一：学习表子查询时，根据教学视频的思路：
-1.将学生按年龄从大到小排序，得到临时表2.对临时表按班级进行分组,保留每组第一个
-好有道理的样子，然而我输入后：
-看起来不是对排序后的临时表分组，而是对原表分组后选取每组第一条信息，也就是说子查询排序失效了
-原因：MySQL5.6以上在子查询中使用order by 语句后查询结果并不会显示排序后的结果当子查询的order by语句后面没有limit"
-        "wordCount": 27
+方法一：1.将学生按年龄从大到小排序，得到临时表2.对临时表按班级进行分组,保留每组第一个
+ 但是这个方法存在一个问题：每组只显示一条数据，没有考虑到有同龄人的情况
+方法二：1.将学生按班级分组，并选出每组最大年龄，得到一张包含班级和该班最大年龄的临时表
+2.用inner join连接临时表和学生表，由于表示班级和年龄的字段一样，用using
+
+"
+        "wordCount": 19
     }
 </script>
 
@@ -314,6 +311,16 @@
         
 <nav id="article-nav">
     
+        <a href="/2019/03/20/子查询排序失效/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">下一篇</strong>
+        <p class="article-nav-title">
+        
+            子查询排序失效
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
     
         <a href="/2019/03/20/MySQL5.7默认打开ONLY_FULL_GROUP_BY模式的问题/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">上一篇</strong>
@@ -335,6 +342,26 @@
         <h3 class="widget-title">最新文章</h3>
         <div class="widget">
             <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2019/03/20/子查询排序失效/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/2019/03/20/子查询排序失效/stu.png)" alt="子查询排序失效" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/技术/">技术</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/技术/MySQL/">MySQL</a></p>
+                            <p class="item-title"><a href="/2019/03/20/子查询排序失效/" class="title">子查询排序失效</a></p>
+                            <p class="item-date"><time datetime="2019-03-20T12:56:38.000Z" itemprop="datePublished">2019-03-20</time></p>
+                        </div>
+                    </li>
                 
                     <li>
                         
@@ -416,26 +443,6 @@
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2019/02/27/还是测试/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/2019/02/27/还是测试/2.jpg)" alt="还是测试" class="thumbnail-image"></span>
-    
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/生活/">生活</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/生活/菜鸡发言/">菜鸡发言</a></p>
-                            <p class="item-title"><a href="/2019/02/27/还是测试/" class="title">还是测试</a></p>
-                            <p class="item-date"><time datetime="2019-02-27T10:42:41.000Z" itemprop="datePublished">2019-02-27</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -445,7 +452,7 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">分类</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/技术/">技术</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/技术/Java/">Java</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/MySQL/">MySQL</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/生活/">生活</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/生活/菜鸡发言/">菜鸡发言</a><span class="category-list-count">3</span></li></ul></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/技术/">技术</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/技术/Java/">Java</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/MySQL/">MySQL</a><span class="category-list-count">3</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/生活/">生活</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/生活/菜鸡发言/">菜鸡发言</a><span class="category-list-count">3</span></li></ul></li></ul>
         </div>
     </div>
 
@@ -455,7 +462,7 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">归档</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">三月 2019</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">二月 2019</a><span class="archive-list-count">2</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">三月 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">二月 2019</a><span class="archive-list-count">2</span></li></ul>
         </div>
     </div>
 
@@ -465,7 +472,7 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">标签</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MySQL/">MySQL</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/练习/">练习</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/问题/">问题</a><span class="tag-list-count">2</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MySQL/">MySQL</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/练习/">练习</a><span class="tag-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -475,7 +482,7 @@
     <div class="widget-wrap widget-float">
         <h3 class="widget-title">标签云</h3>
         <div class="widget tagcloud">
-            <a href="/tags/Java/" style="font-size: 10px;">Java</a> <a href="/tags/MySQL/" style="font-size: 20px;">MySQL</a> <a href="/tags/练习/" style="font-size: 10px;">练习</a> <a href="/tags/问题/" style="font-size: 20px;">问题</a>
+            <a href="/tags/Java/" style="font-size: 10px;">Java</a> <a href="/tags/MySQL/" style="font-size: 20px;">MySQL</a> <a href="/tags/练习/" style="font-size: 10px;">练习</a>
         </div>
     </div>
 
