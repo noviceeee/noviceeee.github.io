@@ -21,7 +21,7 @@
 <meta property="og:description" content="简介此游戏是为了复习Java基础知识而写的，包含图形版和图片版。参考了马士兵的视频教程，在其基础上进行调整优化，并增加了一些新功能，例如：  调整血块的掉落和效果规则 增加技能条，优化炮弹的发射规则 调整复活规则 增加计分、计时功能 增加暂停功能 增加游戏结束画面 增加重新开始功能 优化图片素材  游戏玩法 方向键控制坦克移动左：← 右：→ 上：↑ 下：↓ 左上：←↑ 左下：←↓ 右上：→↑ 右下">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://yoursite.com/2019/03/08/Java版坦克大战/project.png">
-<meta property="og:updated_time" content="2019-03-17T12:36:01.190Z">
+<meta property="og:updated_time" content="2019-03-18T07:41:13.967Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java版坦克大战">
 <meta name="twitter:description" content="简介此游戏是为了复习Java基础知识而写的，包含图形版和图片版。参考了马士兵的视频教程，在其基础上进行调整优化，并增加了一些新功能，例如：  调整血块的掉落和效果规则 增加技能条，优化炮弹的发射规则 调整复活规则 增加计分、计时功能 增加暂停功能 增加游戏结束画面 增加重新开始功能 优化图片素材  游戏玩法 方向键控制坦克移动左：← 右：→ 上：↑ 下：↓ 左上：←↑ 左下：←↓ 右上：→↑ 右下">
@@ -77,7 +77,7 @@
                                     <a class="main-nav-list-link" href="/">主页</a>
                                 </li>
                             
-                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/技术/">技术</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/技术/Java/">Java</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/生活/">生活</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/生活/菜鸡发言/">菜鸡发言</a></li></ul></li></ul>
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/技术/">技术</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/技术/Java/">Java</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/技术/MySQL/">MySQL</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/生活/">生活</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/生活/菜鸡发言/">菜鸡发言</a></li></ul></li></ul>
                                     
                                 <li class="main-nav-list-item">
                                     <a class="main-nav-list-link" href="/about/index.html">关于</a>
@@ -194,7 +194,7 @@
 <li>暂停/继续游戏：空格键</li>
 <li>重新开始：R键</li>
 </ul>
-<p>通过击杀敌方获得积分，死亡可消耗积分复活。玩家要在规定时间内取得尽可能高的分数</p>
+<p>通过击杀敌方获得积分，死亡可消耗积分复活<br>玩家要在规定时间内取得尽可能高的分数</p>
 <h2 id="主要功能"><a href="#主要功能" class="headerlink" title="主要功能"></a>主要功能</h2><h3 id="坦克"><a href="#坦克" class="headerlink" title="坦克"></a>坦克</h3><p>敌方</p>
 <ul>
 <li>初始坐标随机</li>
@@ -215,12 +215,12 @@
 <li>按F2键可以消耗积分在随机地点满血复活</li>
 </ul>
 <h3 id="子弹"><a href="#子弹" class="headerlink" title="子弹"></a>子弹</h3><p>无法穿墙，只能对不同阵营的坦克造成伤害</p>
-<h3 id="血块"><a href="#血块" class="headerlink" title="血块"></a>血块</h3><p>能恢复部分血量和技能值，回满时不再生效。被吃掉或存在一段时间后自动消失</p>
+<h3 id="血块"><a href="#血块" class="headerlink" title="血块"></a>血块</h3><p>能恢复部分血量和技能值，回满时不再生效<br>被吃掉或存在一段时间后自动消失</p>
 <h3 id="墙"><a href="#墙" class="headerlink" title="墙"></a>墙</h3><p>挡子弹，作为掩护</p>
 <h3 id="爆炸"><a href="#爆炸" class="headerlink" title="爆炸"></a>爆炸</h3><p>坦克被击中时产生，分不同阶段</p>
 <h3 id="计时器"><a href="#计时器" class="headerlink" title="计时器"></a>计时器</h3><p>显示倒计时，时间为零时游戏结束</p>
 <h3 id="窗口"><a href="#窗口" class="headerlink" title="窗口"></a>窗口</h3><ul>
-<li>展现游戏画面，显示倒计时和当前得分。</li>
+<li>展现游戏画面，显示倒计时和当前得分</li>
 <li>按空格键暂停/恢复游戏</li>
 <li>游戏结束时显示得分，按R键重新开始</li>
 <li>大小固定，按“关闭”退出游戏</li>
@@ -254,7 +254,7 @@
 
 
 
-    <a data-url="http://yoursite.com/2019/03/08/Java版坦克大战/" data-id="cjtdsk144000224v3yhyppg8v" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://yoursite.com/2019/03/08/Java版坦克大战/" data-id="cjth6x0gk00007ov32h4t3d51" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -330,7 +330,7 @@
         "genre": "技术 Java",
         "datePublished": "2019-03-08",
         "dateCreated": "2019-03-08",
-        "dateModified": "2019-03-17",
+        "dateModified": "2019-03-18",
         "url": "http://yoursite.com/2019/03/08/Java版坦克大战/",
         "description": "简介此游戏是为了复习Java基础知识而写的，包含图形版和图片版。参考了马士兵的视频教程，在其基础上进行调整优化，并增加了一些新功能，例如：
 
@@ -427,6 +427,46 @@
                     <li>
                         
                         <div class="item-thumbnail">
+                            <a href="/2019/03/20/查询每个班中年龄最大的学生信息/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/2019/03/20/查询每个班中年龄最大的学生信息/stu.png)" alt="查询每个班中年龄最大的学生信息" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/技术/">技术</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/技术/MySQL/">MySQL</a></p>
+                            <p class="item-title"><a href="/2019/03/20/查询每个班中年龄最大的学生信息/" class="title">查询每个班中年龄最大的学生信息</a></p>
+                            <p class="item-date"><time datetime="2019-03-20T09:32:18.000Z" itemprop="datePublished">2019-03-20</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2019/03/20/MySQL5.7默认打开ONLY_FULL_GROUP_BY模式的问题/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/2019/03/20/MySQL5.7默认打开ONLY_FULL_GROUP_BY模式的问题/stu.png)" alt="MySQL5.7默认打开ONLY_FULL_GROUP_BY模式的问题" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/技术/">技术</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/技术/MySQL/">MySQL</a></p>
+                            <p class="item-title"><a href="/2019/03/20/MySQL5.7默认打开ONLY_FULL_GROUP_BY模式的问题/" class="title">MySQL5.7默认打开ONLY_FULL_GROUP_BY模式的问题</a></p>
+                            <p class="item-date"><time datetime="2019-03-20T07:39:16.000Z" itemprop="datePublished">2019-03-20</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
                             <a href="/2019/03/08/坦克大战相关/" class="thumbnail">
     
     
@@ -484,26 +524,6 @@
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2019/02/14/测试一下/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/2019/02/14/测试一下/good.jpg)" alt="测试一下" class="thumbnail-image"></span>
-    
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/生活/">生活</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/生活/菜鸡发言/">菜鸡发言</a></p>
-                            <p class="item-title"><a href="/2019/02/14/测试一下/" class="title">测试一下</a></p>
-                            <p class="item-date"><time datetime="2019-02-14T06:01:37.000Z" itemprop="datePublished">2019-02-14</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -513,7 +533,7 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">分类</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/技术/">技术</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/技术/Java/">Java</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/生活/">生活</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/生活/菜鸡发言/">菜鸡发言</a><span class="category-list-count">3</span></li></ul></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/技术/">技术</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/技术/Java/">Java</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/MySQL/">MySQL</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/生活/">生活</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/生活/菜鸡发言/">菜鸡发言</a><span class="category-list-count">3</span></li></ul></li></ul>
         </div>
     </div>
 
@@ -523,7 +543,7 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">归档</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">三月 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">二月 2019</a><span class="archive-list-count">2</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">三月 2019</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">二月 2019</a><span class="archive-list-count">2</span></li></ul>
         </div>
     </div>
 
@@ -533,7 +553,7 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">标签</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/练习/">练习</a><span class="tag-list-count">1</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MySQL/">MySQL</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/练习/">练习</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/问题/">问题</a><span class="tag-list-count">2</span></li></ul>
         </div>
     </div>
 
@@ -543,7 +563,7 @@
     <div class="widget-wrap widget-float">
         <h3 class="widget-title">标签云</h3>
         <div class="widget tagcloud">
-            <a href="/tags/Java/" style="font-size: 10px;">Java</a> <a href="/tags/练习/" style="font-size: 10px;">练习</a>
+            <a href="/tags/Java/" style="font-size: 10px;">Java</a> <a href="/tags/MySQL/" style="font-size: 20px;">MySQL</a> <a href="/tags/练习/" style="font-size: 10px;">练习</a> <a href="/tags/问题/" style="font-size: 20px;">问题</a>
         </div>
     </div>
 

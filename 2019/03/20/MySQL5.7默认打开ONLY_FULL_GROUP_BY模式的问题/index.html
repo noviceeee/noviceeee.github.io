@@ -6,25 +6,26 @@
     
 
     
-    <title>坦克大战相关 | 一条咸鱼游啊游</title>
+    <title>MySQL5.7默认打开ONLY_FULL_GROUP_BY模式的问题 | 一条咸鱼游啊游</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-        <meta name="keywords" content="">
+        <meta name="keywords" content="MySQL,问题">
     
-    <meta name="description" content="因为嫌弃教程里的图片素材太糙，特意用PS处理了一下，把坦克的白边切掉，敌我坦克和子弹用不同颜色区分 墙的素材是网上找的，教程里没有。原始的是个小方块，为了偷懒我直接用PS加长了不偷懒的话估计要建一个集合，和其他集合差不多的处理方式 其实直接重新找一整套素材还省事些…… 目前没发现游戏有其他问题，我的操作水平不允许我活到发现问题的时候 网络版的以后再做  本次练习额外收获：  用Win10自带软件录">
+    <meta name="description" content="将学生按班级分组，然后选取学生姓名和班级  原因：MySQL 5.7.5后的sql_mode默认是only_full_group_by，用于group by合法性的检查。如果select中的字段没有在group by中出现，那么这个语句是不合法的，会报错（除非字段在聚合函数里面） 解决方法：1.使用any_value()函数函数作用：禁止ONLY_FULL_GROUP_BY值拒绝具体做法：将导致报">
+<meta name="keywords" content="MySQL,问题">
 <meta property="og:type" content="article">
-<meta property="og:title" content="坦克大战相关">
-<meta property="og:url" content="http://yoursite.com/2019/03/08/坦克大战相关/index.html">
+<meta property="og:title" content="MySQL5.7默认打开ONLY_FULL_GROUP_BY模式的问题">
+<meta property="og:url" content="http://yoursite.com/2019/03/20/MySQL5.7默认打开ONLY_FULL_GROUP_BY模式的问题/index.html">
 <meta property="og:site_name" content="一条咸鱼游啊游">
-<meta property="og:description" content="因为嫌弃教程里的图片素材太糙，特意用PS处理了一下，把坦克的白边切掉，敌我坦克和子弹用不同颜色区分 墙的素材是网上找的，教程里没有。原始的是个小方块，为了偷懒我直接用PS加长了不偷懒的话估计要建一个集合，和其他集合差不多的处理方式 其实直接重新找一整套素材还省事些…… 目前没发现游戏有其他问题，我的操作水平不允许我活到发现问题的时候 网络版的以后再做  本次练习额外收获：  用Win10自带软件录">
+<meta property="og:description" content="将学生按班级分组，然后选取学生姓名和班级  原因：MySQL 5.7.5后的sql_mode默认是only_full_group_by，用于group by合法性的检查。如果select中的字段没有在group by中出现，那么这个语句是不合法的，会报错（除非字段在聚合函数里面） 解决方法：1.使用any_value()函数函数作用：禁止ONLY_FULL_GROUP_BY值拒绝具体做法：将导致报">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://yoursite.com/2019/03/08/坦克大战相关/1.jpg">
-<meta property="og:updated_time" content="2019-03-20T12:32:33.168Z">
+<meta property="og:image" content="http://yoursite.com/2019/03/20/MySQL5.7默认打开ONLY_FULL_GROUP_BY模式的问题/stu.png">
+<meta property="og:updated_time" content="2019-03-20T12:35:05.182Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="坦克大战相关">
-<meta name="twitter:description" content="因为嫌弃教程里的图片素材太糙，特意用PS处理了一下，把坦克的白边切掉，敌我坦克和子弹用不同颜色区分 墙的素材是网上找的，教程里没有。原始的是个小方块，为了偷懒我直接用PS加长了不偷懒的话估计要建一个集合，和其他集合差不多的处理方式 其实直接重新找一整套素材还省事些…… 目前没发现游戏有其他问题，我的操作水平不允许我活到发现问题的时候 网络版的以后再做  本次练习额外收获：  用Win10自带软件录">
-<meta name="twitter:image" content="http://yoursite.com/2019/03/08/坦克大战相关/1.jpg">
+<meta name="twitter:title" content="MySQL5.7默认打开ONLY_FULL_GROUP_BY模式的问题">
+<meta name="twitter:description" content="将学生按班级分组，然后选取学生姓名和班级  原因：MySQL 5.7.5后的sql_mode默认是only_full_group_by，用于group by合法性的检查。如果select中的字段没有在group by中出现，那么这个语句是不合法的，会报错（除非字段在聚合函数里面） 解决方法：1.使用any_value()函数函数作用：禁止ONLY_FULL_GROUP_BY值拒绝具体做法：将导致报">
+<meta name="twitter:image" content="http://yoursite.com/2019/03/20/MySQL5.7默认打开ONLY_FULL_GROUP_BY模式的问题/stu.png">
     
 
     
@@ -135,19 +136,19 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <a class="page-title-link" href="/categories/生活/">生活</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/生活/菜鸡发言/">菜鸡发言</a>
+    <a class="page-title-link" href="/categories/技术/">技术</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/技术/MySQL/">MySQL</a>
     </h1>
 </div>
 
                         <div class="main-body-content">
-                            <article id="post-坦克大战相关" class="article article-single article-type-post" itemscope="" itemprop="blogPost">
+                            <article id="post-MySQL5.7默认打开ONLY_FULL_GROUP_BY模式的问题" class="article article-single article-type-post" itemscope="" itemprop="blogPost">
 	<div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        坦克大战相关
+        MySQL5.7默认打开ONLY_FULL_GROUP_BY模式的问题
         </h1>
     
 
@@ -157,30 +158,28 @@
             <div class="article-meta">
                 
     <div class="article-date">
-        <a href="/2019/03/08/坦克大战相关/" class="article-date">
-            <time datetime="2019-03-08T14:57:24.000Z" itemprop="datePublished">2019-03-08</time>
+        <a href="/2019/03/20/MySQL5.7默认打开ONLY_FULL_GROUP_BY模式的问题/" class="article-date">
+            <time datetime="2019-03-20T07:39:16.000Z" itemprop="datePublished">2019-03-20</time>
         </a>
     </div>
 
 		
 
                 
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/MySQL/">MySQL</a>, <a class="tag-link" href="/tags/问题/">问题</a>
+    </div>
+
             </div>	
         
         
         <div class="article-entry" itemprop="articleBody">
-            <p>因为嫌弃教程里的图片素材太糙，特意用PS处理了一下，把坦克的白边切掉，敌我坦克和子弹用不同颜色区分</p>
-<p>墙的素材是网上找的，教程里没有。<br>原始的是个小方块，为了偷懒我直接用PS加长了<br>不偷懒的话估计要建一个集合，和其他集合差不多的处理方式</p>
-<p>其实直接重新找一整套素材还省事些……</p>
-<p>目前没发现游戏有其他问题，<del>我的操作水平不允许我活到发现问题的时候</del></p>
-<p>网络版的以后再做</p>
-<p><img src="/2019/03/08/坦克大战相关/1.jpg" alt=""></p>
-<p>本次练习额外收获：</p>
-<ul>
-<li>用Win10自带软件录视频</li>
-<li>用PS将视频转成gif</li>
-<li>更多markdown语法</li>
-</ul>
+            <p><img src="/2019/03/20/MySQL5.7默认打开ONLY_FULL_GROUP_BY模式的问题/stu.png" alt="学生表stu"><br>将学生按班级分组，然后选取学生姓名和班级</p>
+<p><img src="/2019/03/20/MySQL5.7默认打开ONLY_FULL_GROUP_BY模式的问题/error.png" alt="报错"></p>
+<h2 id="原因："><a href="#原因：" class="headerlink" title="原因："></a>原因：</h2><p>MySQL 5.7.5后的sql_mode默认是only_full_group_by，用于group by合法性的检查。如果select中的字段没有在group by中出现，那么这个语句是不合法的，会报错（除非字段在聚合函数里面）</p>
+<h2 id="解决方法："><a href="#解决方法：" class="headerlink" title="解决方法："></a>解决方法：</h2><p><strong>1.使用any_value()函数</strong><br>函数作用：禁止ONLY_FULL_GROUP_BY值拒绝<br>具体做法：将导致报错的字段放入any_value()<br><img src="/2019/03/20/MySQL5.7默认打开ONLY_FULL_GROUP_BY模式的问题/result.png" alt="分组后每组只保留第一行数据"></p>
+<p><strong>2.关闭only_full_group_by</strong><br>参考博客：<a href="https://www.cnblogs.com/fswhq/p/9729761.html" target="_blank" rel="noopener">https://www.cnblogs.com/fswhq/p/9729761.html</a><br>为了避免随意修改默认设置后产生其他问题，暂时只记录一下</p>
 
         </div>
         <footer class="article-footer">
@@ -188,7 +187,7 @@
 
 
 
-    <a data-url="http://yoursite.com/2019/03/08/坦克大战相关/" data-id="cjth6x0gx00077ov3xf7b3fy6" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://yoursite.com/2019/03/20/MySQL5.7默认打开ONLY_FULL_GROUP_BY模式的问题/" data-id="cjth6x0gr00027ov3gsw1w1ma" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -258,24 +257,19 @@
             "@type": "Person",
             "name": "noviceeee"
         },
-        "headline": "坦克大战相关",
-        "image": "http://yoursite.com/2019/03/08/坦克大战相关/1.jpg",
-        "keywords": "",
-        "genre": "生活 菜鸡发言",
-        "datePublished": "2019-03-08",
-        "dateCreated": "2019-03-08",
+        "headline": "MySQL5.7默认打开ONLY_FULL_GROUP_BY模式的问题",
+        "image": "http://yoursite.com/2019/03/20/MySQL5.7默认打开ONLY_FULL_GROUP_BY模式的问题/stu.png",
+        "keywords": "MySQL 问题",
+        "genre": "技术 MySQL",
+        "datePublished": "2019-03-20",
+        "dateCreated": "2019-03-20",
         "dateModified": "2019-03-20",
-        "url": "http://yoursite.com/2019/03/08/坦克大战相关/",
-        "description": "因为嫌弃教程里的图片素材太糙，特意用PS处理了一下，把坦克的白边切掉，敌我坦克和子弹用不同颜色区分
-墙的素材是网上找的，教程里没有。原始的是个小方块，为了偷懒我直接用PS加长了不偷懒的话估计要建一个集合，和其他集合差不多的处理方式
-其实直接重新找一整套素材还省事些……
-目前没发现游戏有其他问题，我的操作水平不允许我活到发现问题的时候
-网络版的以后再做
+        "url": "http://yoursite.com/2019/03/20/MySQL5.7默认打开ONLY_FULL_GROUP_BY模式的问题/",
+        "description": "将学生按班级分组，然后选取学生姓名和班级
 
-本次练习额外收获：
-
-用Win10自带软件录"
-        "wordCount": 3
+原因：MySQL 5.7.5后的sql_mode默认是only_full_group_by，用于group by合法性的检查。如果select中的字段没有在group by中出现，那么这个语句是不合法的，会报错（除非字段在聚合函数里面）
+解决方法：1.使用any_value()函数函数作用：禁止ONLY_FULL_GROUP_BY值拒绝具体做法：将导致报"
+        "wordCount": 21
     }
 </script>
 
@@ -313,20 +307,20 @@
         
 <nav id="article-nav">
     
-        <a href="/2019/03/20/MySQL5.7默认打开ONLY_FULL_GROUP_BY模式的问题/" id="article-nav-newer" class="article-nav-link-wrap">
+        <a href="/2019/03/20/查询每个班中年龄最大的学生信息/" id="article-nav-newer" class="article-nav-link-wrap">
         <strong class="article-nav-caption">下一篇</strong>
         <p class="article-nav-title">
         
-            MySQL5.7默认打开ONLY_FULL_GROUP_BY模式的问题
+            查询每个班中年龄最大的学生信息
         
         </p>
         <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
     </a>
     
     
-        <a href="/2019/03/08/Java版坦克大战/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2019/03/08/坦克大战相关/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">上一篇</strong>
-        <p class="article-nav-title">Java版坦克大战</p>
+        <p class="article-nav-title">坦克大战相关</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
