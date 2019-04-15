@@ -6,26 +6,26 @@
     
 
     
-    <title>查询每个班中年龄最大的学生信息 | 一条咸鱼游啊游</title>
+    <title>自定义函数报错ERROR 1418 (HY000) | 一条咸鱼游啊游</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
         <meta name="keywords" content="MySQL">
     
-    <meta name="description" content="方法一：1.将学生按年龄从大到小排序，得到临时表2.对临时表按班级进行分组,保留每组第一个  但是这个方法存在一个问题：每组只显示一条数据，没有考虑到有同龄人的情况 方法二：1.将学生按班级分组，并选出每组最大年龄，得到一张包含班级和该班最大年龄的临时表 2.用inner join连接临时表和学生表，由于表示班级和年龄的字段一样，用using">
+    <meta name="description" content="错误信息：ERROR 1418 (HY000): This function has none of DETERMINISTIC, NO SQL, or READS SQL DATA in its declaration and binary logging is enabled (you might want to use the less safe log_bin_trust_functio">
 <meta name="keywords" content="MySQL">
 <meta property="og:type" content="article">
-<meta property="og:title" content="查询每个班中年龄最大的学生信息">
-<meta property="og:url" content="http://yoursite.com/2019/03/20/查询每个班中年龄最大的学生信息/index.html">
+<meta property="og:title" content="自定义函数报错ERROR 1418 (HY000)">
+<meta property="og:url" content="http://yoursite.com/2019/04/15/自定义函数报错/index.html">
 <meta property="og:site_name" content="一条咸鱼游啊游">
-<meta property="og:description" content="方法一：1.将学生按年龄从大到小排序，得到临时表2.对临时表按班级进行分组,保留每组第一个  但是这个方法存在一个问题：每组只显示一条数据，没有考虑到有同龄人的情况 方法二：1.将学生按班级分组，并选出每组最大年龄，得到一张包含班级和该班最大年龄的临时表 2.用inner join连接临时表和学生表，由于表示班级和年龄的字段一样，用using">
+<meta property="og:description" content="错误信息：ERROR 1418 (HY000): This function has none of DETERMINISTIC, NO SQL, or READS SQL DATA in its declaration and binary logging is enabled (you might want to use the less safe log_bin_trust_functio">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://yoursite.com/2019/03/20/查询每个班中年龄最大的学生信息/stu.png">
-<meta property="og:updated_time" content="2019-04-01T09:06:14.931Z">
+<meta property="og:image" content="http://yoursite.com/2019/04/15/自定义函数报错/error.png">
+<meta property="og:updated_time" content="2019-04-15T12:23:20.698Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="查询每个班中年龄最大的学生信息">
-<meta name="twitter:description" content="方法一：1.将学生按年龄从大到小排序，得到临时表2.对临时表按班级进行分组,保留每组第一个  但是这个方法存在一个问题：每组只显示一条数据，没有考虑到有同龄人的情况 方法二：1.将学生按班级分组，并选出每组最大年龄，得到一张包含班级和该班最大年龄的临时表 2.用inner join连接临时表和学生表，由于表示班级和年龄的字段一样，用using">
-<meta name="twitter:image" content="http://yoursite.com/2019/03/20/查询每个班中年龄最大的学生信息/stu.png">
+<meta name="twitter:title" content="自定义函数报错ERROR 1418 (HY000)">
+<meta name="twitter:description" content="错误信息：ERROR 1418 (HY000): This function has none of DETERMINISTIC, NO SQL, or READS SQL DATA in its declaration and binary logging is enabled (you might want to use the less safe log_bin_trust_functio">
+<meta name="twitter:image" content="http://yoursite.com/2019/04/15/自定义函数报错/error.png">
     
 
     
@@ -141,14 +141,14 @@
 </div>
 
                         <div class="main-body-content">
-                            <article id="post-查询每个班中年龄最大的学生信息" class="article article-single article-type-post" itemscope="" itemprop="blogPost">
+                            <article id="post-自定义函数报错" class="article article-single article-type-post" itemscope="" itemprop="blogPost">
 	<div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        查询每个班中年龄最大的学生信息
+        自定义函数报错ERROR 1418 (HY000)
         </h1>
     
 
@@ -158,8 +158,8 @@
             <div class="article-meta">
                 
     <div class="article-date">
-        <a href="/2019/03/20/查询每个班中年龄最大的学生信息/" class="article-date">
-            <time datetime="2019-03-20T09:32:18.000Z" itemprop="datePublished">2019-03-20</time>
+        <a href="/2019/04/15/自定义函数报错/" class="article-date">
+            <time datetime="2019-04-15T12:01:25.000Z" itemprop="datePublished">2019-04-15</time>
         </a>
     </div>
 
@@ -175,12 +175,16 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            <p><img src="/2019/03/20/查询每个班中年龄最大的学生信息/stu.png" alt="又是学生表stu"></p>
-<h3 id="方法一："><a href="#方法一：" class="headerlink" title="方法一："></a>方法一：</h3><p><strong>1.将学生按年龄从大到小排序，得到临时表</strong><br><strong>2.对临时表按班级进行分组,保留每组第一个</strong></p>
-<p><img src="/2019/03/20/查询每个班中年龄最大的学生信息/result2.png" alt=""><br> 但是这个方法存在一个问题：每组只显示一条数据，没有考虑到有同龄人的情况</p>
-<h3 id="方法二："><a href="#方法二：" class="headerlink" title="方法二："></a>方法二：</h3><p><strong>1.将学生按班级分组，并选出每组最大年龄，得到一张包含班级和该班最大年龄的临时表</strong></p>
-<p><img src="/2019/03/20/查询每个班中年龄最大的学生信息/temp.png" alt="临时表temp"><br><strong>2.用inner join连接临时表和学生表，由于表示班级和年龄的字段一样，用using</strong></p>
-<p><img src="/2019/03/20/查询每个班中年龄最大的学生信息/result3.png" alt="正确的查询结果"></p>
+            <p><img src="/2019/04/15/自定义函数报错/error.png" alt=""></p>
+<h2 id="错误信息："><a href="#错误信息：" class="headerlink" title="错误信息："></a>错误信息：</h2><p>ERROR 1418 (HY000): This function has none of DETERMINISTIC, NO SQL, or READS SQL DATA in its declaration and binary logging is enabled (you <em>might</em> want to use the less safe log_bin_trust_function_creators variable)</p>
+<h2 id="原因："><a href="#原因：" class="headerlink" title="原因："></a>原因：</h2><p>bin-log(二进制日志)的一个重要功能是用于主从复制，而存储函数有可能导致主从的数据不一致。所以当开启bin-log后，参数log_bin_trust_function_creators就会生效，限制存储函数的创建、修改、调用。</p>
+<h2 id="解决方法："><a href="#解决方法：" class="headerlink" title="解决方法："></a>解决方法：</h2><p><strong>方法一：为函数指定参数，明确告知MySQL服务器这个函数不会修改数据</strong><br>开启了bin-log就必须指定函数是否是<br>1.DETERMINISTIC 不确定的<br>2.NO SQL 没有SQl语句<br>3.READS SQL DATA 只是读取数据<br>4.MODIFIES SQL DATA 要修改数据<br>5.CONTAINS SQL 包含SQL语句</p>
+<p>其中在function里面，只有DETERMINISTIC，NO SQL 和READS SQL DATA被支持。如果开启了bin-log，就必须为function指定一个参数。</p>
+<p><img src="/2019/04/15/自定义函数报错/right.png" alt=""></p>
+<p><strong>方法二：修改MySQL参数log_bin_trust_function_creators</strong><br>set global log_bin_trust_function_creators=1;（服务重启后失效）<br>在my.cnf中设置，加上log_bin_trust_function_creators=1（永久生效）</p>
+<p>参数作用：当二进制日志启用后，这个变量就会启用。它控制是否可以信任存储函数创建者，不会创建写入二进制日志引起不安全事件的存储函数。如果设置为0（默认值），用户不得创建或修改存储函数，除非它们具有除CREATE ROUTINE或ALTER ROUTINE特权之外的SUPER权限。 设置为0还强制使用DETERMINISTIC特性或READS SQL DATA或NO SQL特性声明函数的限制。 如果变量设置为1，MySQL不会对创建存储函数实施这些限制。 此变量也适用于触发器的创建。</p>
+<p>为了避免随意修改默认设置后产生其他问题，暂时只记录一下</p>
+<p>参考博客：<a href="https://www.cnblogs.com/kerrycode/p/7641835.html" target="_blank" rel="noopener">https://www.cnblogs.com/kerrycode/p/7641835.html</a></p>
 
         </div>
         <footer class="article-footer">
@@ -188,7 +192,7 @@
 
 
 
-    <a data-url="http://yoursite.com/2019/03/20/查询每个班中年龄最大的学生信息/" data-id="cjuibv0zk000jwgv3mhu4lcn2" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://yoursite.com/2019/04/15/自定义函数报错/" data-id="cjuibxe23001swgv3omu1mg07" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -258,22 +262,17 @@
             "@type": "Person",
             "name": "noviceeee"
         },
-        "headline": "查询每个班中年龄最大的学生信息",
-        "image": "http://yoursite.com/2019/03/20/查询每个班中年龄最大的学生信息/stu.png",
+        "headline": "自定义函数报错ERROR 1418 (HY000)",
+        "image": "http://yoursite.com/2019/04/15/自定义函数报错/error.png",
         "keywords": "MySQL",
         "genre": "技术 MySQL",
-        "datePublished": "2019-03-20",
-        "dateCreated": "2019-03-20",
-        "dateModified": "2019-04-01",
-        "url": "http://yoursite.com/2019/03/20/查询每个班中年龄最大的学生信息/",
+        "datePublished": "2019-04-15",
+        "dateCreated": "2019-04-15",
+        "dateModified": "2019-04-15",
+        "url": "http://yoursite.com/2019/04/15/自定义函数报错/",
         "description": "
-方法一：1.将学生按年龄从大到小排序，得到临时表2.对临时表按班级进行分组,保留每组第一个
- 但是这个方法存在一个问题：每组只显示一条数据，没有考虑到有同龄人的情况
-方法二：1.将学生按班级分组，并选出每组最大年龄，得到一张包含班级和该班最大年龄的临时表
-2.用inner join连接临时表和学生表，由于表示班级和年龄的字段一样，用using
-
-"
-        "wordCount": 19
+错误信息：ERROR 1418 (HY000): This function has none of DETERMINISTIC, NO SQL, or READS SQL DATA in its declaration and binary logging is enabled (you might want to use the less safe log_bin_trust_functio"
+        "wordCount": 77
     }
 </script>
 
@@ -311,20 +310,10 @@
         
 <nav id="article-nav">
     
-        <a href="/2019/03/20/子查询排序失效/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">下一篇</strong>
-        <p class="article-nav-title">
-        
-            子查询排序失效
-        
-        </p>
-        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
-    </a>
     
-    
-        <a href="/2019/03/20/MySQL5.7默认打开ONLY_FULL_GROUP_BY模式的问题/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2019/04/01/MySQL中G和g的作用/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">上一篇</strong>
-        <p class="article-nav-title">MySQL5.7默认打开ONLY_FULL_GROUP_BY模式的问题</p>
+        <p class="article-nav-title">MySQL中\G和\g的作用</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     

@@ -21,7 +21,7 @@
 <meta property="og:description" content="错误信息：ERROR 1418 (HY000): This function has none of DETERMINISTIC, NO SQL, or READS SQL DATA in its declaration and binary logging is enabled (you might want to use the less safe log_bin_trust_functio">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://yoursite.com/2019/04/15/自定义函数报错ERROR">
-<meta property="og:updated_time" content="2019-04-15T04:56:22.449Z">
+<meta property="og:updated_time" content="2019-04-15T06:43:29.724Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="自定义函数报错:ERROR 1418">
 <meta name="twitter:description" content="错误信息：ERROR 1418 (HY000): This function has none of DETERMINISTIC, NO SQL, or READS SQL DATA in its declaration and binary logging is enabled (you might want to use the less safe log_bin_trust_functio">
@@ -175,7 +175,7 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            <p><img src="/2019/04/15/自定义函数报错ERROR 1418/error.png" alt="MySQL版本：8.0.15"></p>
+            <p><img src="/2019/04/15/自定义函数报错ERROR 1418/error.png" alt=""></p>
 <h2 id="错误信息："><a href="#错误信息：" class="headerlink" title="错误信息："></a>错误信息：</h2><p>ERROR 1418 (HY000): This function has none of DETERMINISTIC, NO SQL, or READS SQL DATA in its declaration and binary logging is enabled (you <em>might</em> want to use the less safe log_bin_trust_function_creators variable)</p>
 <h2 id="原因："><a href="#原因：" class="headerlink" title="原因："></a>原因：</h2><p>bin-log(二进制日志)的一个重要功能是用于主从复制，而存储函数有可能导致主从的数据不一致。所以当开启bin-log后，参数log_bin_trust_function_creators就会生效，限制存储函数的创建、修改、调用。</p>
 <h2 id="解决方法："><a href="#解决方法：" class="headerlink" title="解决方法："></a>解决方法：</h2><p><strong>方法一：为函数指定参数，明确告知MySQL服务器这个函数不会修改数据</strong><br>开启了bin-log就必须指定函数是否是<br>1.DETERMINISTIC 不确定的<br>2.NO SQL 没有SQl语句<br>3.READS SQL DATA 只是读取数据<br>4.MODIFIES SQL DATA 要修改数据<br>5.CONTAINS SQL 包含SQL语句</p>
@@ -192,7 +192,7 @@
 
 
 
-    <a data-url="http://yoursite.com/2019/04/15/自定义函数报错ERROR 1418/" data-id="cjuhvfrmb001kqwv3zra9lng9" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://yoursite.com/2019/04/15/自定义函数报错ERROR 1418/" data-id="cjuhzsyq2000daov3jmcf3u3a" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
