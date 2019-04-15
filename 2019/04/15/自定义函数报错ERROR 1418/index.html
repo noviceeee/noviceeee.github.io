@@ -6,26 +6,26 @@
     
 
     
-    <title>MySQL中\G和\g的作用 | 一条咸鱼游啊游</title>
+    <title>自定义函数报错:ERROR 1418 | 一条咸鱼游啊游</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
         <meta name="keywords" content="MySQL">
     
-    <meta name="description" content="\g: 等价于分号”;”示例： \G: 将查询结果按列打印，即将横向表格纵向输出，方便阅读，也有分号的作用示例1： 示例2：">
+    <meta name="description" content="错误信息：ERROR 1418 (HY000): This function has none of DETERMINISTIC, NO SQL, or READS SQL DATA in its declaration and binary logging is enabled (you might want to use the less safe log_bin_trust_functio">
 <meta name="keywords" content="MySQL">
 <meta property="og:type" content="article">
-<meta property="og:title" content="MySQL中\G和\g的作用">
-<meta property="og:url" content="http://yoursite.com/2019/04/01/MySQL中G和g的作用/index.html">
+<meta property="og:title" content="自定义函数报错:ERROR 1418">
+<meta property="og:url" content="http://yoursite.com/2019/04/15/自定义函数报错ERROR 1418/index.html">
 <meta property="og:site_name" content="一条咸鱼游啊游">
-<meta property="og:description" content="\g: 等价于分号”;”示例： \G: 将查询结果按列打印，即将横向表格纵向输出，方便阅读，也有分号的作用示例1： 示例2：">
+<meta property="og:description" content="错误信息：ERROR 1418 (HY000): This function has none of DETERMINISTIC, NO SQL, or READS SQL DATA in its declaration and binary logging is enabled (you might want to use the less safe log_bin_trust_functio">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://yoursite.com/2019/04/01/MySQL中G和g的作用/g.png">
-<meta property="og:updated_time" content="2019-04-01T09:31:53.568Z">
+<meta property="og:image" content="http://yoursite.com/2019/04/15/自定义函数报错ERROR">
+<meta property="og:updated_time" content="2019-04-15T04:56:22.449Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="MySQL中\G和\g的作用">
-<meta name="twitter:description" content="\g: 等价于分号”;”示例： \G: 将查询结果按列打印，即将横向表格纵向输出，方便阅读，也有分号的作用示例1： 示例2：">
-<meta name="twitter:image" content="http://yoursite.com/2019/04/01/MySQL中G和g的作用/g.png">
+<meta name="twitter:title" content="自定义函数报错:ERROR 1418">
+<meta name="twitter:description" content="错误信息：ERROR 1418 (HY000): This function has none of DETERMINISTIC, NO SQL, or READS SQL DATA in its declaration and binary logging is enabled (you might want to use the less safe log_bin_trust_functio">
+<meta name="twitter:image" content="http://yoursite.com/2019/04/15/自定义函数报错ERROR">
     
 
     
@@ -141,14 +141,14 @@
 </div>
 
                         <div class="main-body-content">
-                            <article id="post-MySQL中G和g的作用" class="article article-single article-type-post" itemscope="" itemprop="blogPost">
+                            <article id="post-自定义函数报错ERROR 1418" class="article article-single article-type-post" itemscope="" itemprop="blogPost">
 	<div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        MySQL中\G和\g的作用
+        自定义函数报错:ERROR 1418
         </h1>
     
 
@@ -158,8 +158,8 @@
             <div class="article-meta">
                 
     <div class="article-date">
-        <a href="/2019/04/01/MySQL中G和g的作用/" class="article-date">
-            <time datetime="2019-04-01T08:35:39.000Z" itemprop="datePublished">2019-04-01</time>
+        <a href="/2019/04/15/自定义函数报错ERROR 1418/" class="article-date">
+            <time datetime="2019-04-15T03:58:02.000Z" itemprop="datePublished">2019-04-15</time>
         </a>
     </div>
 
@@ -175,9 +175,16 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            <p>\g: 等价于分号”;”<br>示例：<img src="/2019/04/01/MySQL中G和g的作用/g.png" alt=""></p>
-<p>\G: 将查询结果按列打印，即将横向表格纵向输出，方便阅读，也有分号的作用<br>示例1：<br><img src="/2019/04/01/MySQL中G和g的作用/G1.png" alt=""></p>
-<p>示例2：<br><img src="/2019/04/01/MySQL中G和g的作用/G2.png" alt="字段多的时候，横向显示很乱"><br><img src="/2019/04/01/MySQL中G和g的作用/G3.png" alt="每个字段和对应值单独占一行，非常清晰"></p>
+            <p><img src="/2019/04/15/自定义函数报错ERROR 1418/error.png" alt="MySQL版本：8.0.15"></p>
+<h2 id="错误信息："><a href="#错误信息：" class="headerlink" title="错误信息："></a>错误信息：</h2><p>ERROR 1418 (HY000): This function has none of DETERMINISTIC, NO SQL, or READS SQL DATA in its declaration and binary logging is enabled (you <em>might</em> want to use the less safe log_bin_trust_function_creators variable)</p>
+<h2 id="原因："><a href="#原因：" class="headerlink" title="原因："></a>原因：</h2><p>bin-log(二进制日志)的一个重要功能是用于主从复制，而存储函数有可能导致主从的数据不一致。所以当开启bin-log后，参数log_bin_trust_function_creators就会生效，限制存储函数的创建、修改、调用。</p>
+<h2 id="解决方法："><a href="#解决方法：" class="headerlink" title="解决方法："></a>解决方法：</h2><p><strong>方法一：为函数指定参数，明确告知MySQL服务器这个函数不会修改数据</strong><br>开启了bin-log就必须指定函数是否是<br>1.DETERMINISTIC 不确定的<br>2.NO SQL 没有SQl语句<br>3.READS SQL DATA 只是读取数据<br>4.MODIFIES SQL DATA 要修改数据<br>5.CONTAINS SQL 包含SQL语句</p>
+<p>其中在function里面，只有DETERMINISTIC，NO SQL 和READS SQL DATA被支持。如果开启了bin-log，就必须为function指定一个参数。</p>
+<p><img src="/2019/04/15/自定义函数报错ERROR 1418/right.png" alt=""></p>
+<p><strong>方法二：修改MySQL参数log_bin_trust_function_creators</strong><br>set global log_bin_trust_function_creators=1;（服务重启后失效）<br>在my.cnf中设置，加上log_bin_trust_function_creators=1（永久生效）</p>
+<p>参数作用：当二进制日志启用后，这个变量就会启用。它控制是否可以信任存储函数创建者，不会创建写入二进制日志引起不安全事件的存储函数。如果设置为0（默认值），用户不得创建或修改存储函数，除非它们具有除CREATE ROUTINE或ALTER ROUTINE特权之外的SUPER权限。 设置为0还强制使用DETERMINISTIC特性或READS SQL DATA或NO SQL特性声明函数的限制。 如果变量设置为1，MySQL不会对创建存储函数实施这些限制。 此变量也适用于触发器的创建。</p>
+<p>为了避免随意修改默认设置后产生其他问题，暂时只记录一下</p>
+<p>参考博客：<a href="https://www.cnblogs.com/kerrycode/p/7641835.html" target="_blank" rel="noopener">https://www.cnblogs.com/kerrycode/p/7641835.html</a></p>
 
         </div>
         <footer class="article-footer">
@@ -185,7 +192,7 @@
 
 
 
-    <a data-url="http://yoursite.com/2019/04/01/MySQL中G和g的作用/" data-id="cjuhvbpkv0005qwv3sqka8wem" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://yoursite.com/2019/04/15/自定义函数报错ERROR 1418/" data-id="cjuhvfrmb001kqwv3zra9lng9" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -255,19 +262,17 @@
             "@type": "Person",
             "name": "noviceeee"
         },
-        "headline": "MySQL中\G和\g的作用",
-        "image": "http://yoursite.com/2019/04/01/MySQL中G和g的作用/g.png",
+        "headline": "自定义函数报错:ERROR 1418",
+        "image": "http://yoursite.com/2019/04/15/自定义函数报错ERROR",
         "keywords": "MySQL",
         "genre": "技术 MySQL",
-        "datePublished": "2019-04-01",
-        "dateCreated": "2019-04-01",
-        "dateModified": "2019-04-01",
-        "url": "http://yoursite.com/2019/04/01/MySQL中G和g的作用/",
-        "description": "\g: 等价于分号”;”示例：
-\G: 将查询结果按列打印，即将横向表格纵向输出，方便阅读，也有分号的作用示例1：
-示例2：
-"
-        "wordCount": 11
+        "datePublished": "2019-04-15",
+        "dateCreated": "2019-04-15",
+        "dateModified": "2019-04-15",
+        "url": "http://yoursite.com/2019/04/15/自定义函数报错ERROR 1418/",
+        "description": "
+错误信息：ERROR 1418 (HY000): This function has none of DETERMINISTIC, NO SQL, or READS SQL DATA in its declaration and binary logging is enabled (you might want to use the less safe log_bin_trust_functio"
+        "wordCount": 79
     }
 </script>
 
@@ -305,20 +310,10 @@
         
 <nav id="article-nav">
     
-        <a href="/2019/04/15/自定义函数报错ERROR 1418/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">下一篇</strong>
-        <p class="article-nav-title">
-        
-            自定义函数报错:ERROR 1418
-        
-        </p>
-        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
-    </a>
     
-    
-        <a href="/2019/04/01/MySQL8.0修改用户密码的方法/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2019/04/01/MySQL中G和g的作用/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">上一篇</strong>
-        <p class="article-nav-title">MySQL8.0修改用户密码的方法</p>
+        <p class="article-nav-title">MySQL中\G和\g的作用</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
