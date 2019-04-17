@@ -6,25 +6,26 @@
     
 
     
-    <title>还是测试 | 一条咸鱼游啊游</title>
+    <title>The server time zone value &#39;???ú±ê×??±??&#39; is unrecognized or represents more than one time zone | 一条咸鱼游啊游</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-        <meta name="keywords" content="">
+        <meta name="keywords" content="MySQL">
     
-    <meta name="description" content="终于把评论功能给整出来了，它可以没什么用但我必须要有目前用的是LiveRe，不想继续折腾了，valine配置后没反应我能怎么办">
+    <meta name="description" content="报错信息：SQLException: The server time zone value ‘???ú±ê×??±??’ is unrecognized or represents more than one time zone. You must configure either the server or JDBC driver (via the serverTimezone configu">
+<meta name="keywords" content="MySQL">
 <meta property="og:type" content="article">
-<meta property="og:title" content="还是测试">
-<meta property="og:url" content="http://yoursite.com/2019/02/27/还是测试/index.html">
+<meta property="og:title" content="The server time zone value &#39;???ú±ê×??±??&#39; is unrecognized or represents more than one time zone">
+<meta property="og:url" content="http://yoursite.com/2019/04/17/The-server-time-zone-value/index.html">
 <meta property="og:site_name" content="一条咸鱼游啊游">
-<meta property="og:description" content="终于把评论功能给整出来了，它可以没什么用但我必须要有目前用的是LiveRe，不想继续折腾了，valine配置后没反应我能怎么办">
+<meta property="og:description" content="报错信息：SQLException: The server time zone value ‘???ú±ê×??±??’ is unrecognized or represents more than one time zone. You must configure either the server or JDBC driver (via the serverTimezone configu">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://yoursite.com/2019/02/27/还是测试/2.jpg">
-<meta property="og:updated_time" content="2019-04-04T05:19:01.185Z">
+<meta property="og:image" content="http://yoursite.com/2019/04/17/The-server-time-zone-value/exception.png">
+<meta property="og:updated_time" content="2019-04-17T09:37:50.837Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="还是测试">
-<meta name="twitter:description" content="终于把评论功能给整出来了，它可以没什么用但我必须要有目前用的是LiveRe，不想继续折腾了，valine配置后没反应我能怎么办">
-<meta name="twitter:image" content="http://yoursite.com/2019/02/27/还是测试/2.jpg">
+<meta name="twitter:title" content="The server time zone value &#39;???ú±ê×??±??&#39; is unrecognized or represents more than one time zone">
+<meta name="twitter:description" content="报错信息：SQLException: The server time zone value ‘???ú±ê×??±??’ is unrecognized or represents more than one time zone. You must configure either the server or JDBC driver (via the serverTimezone configu">
+<meta name="twitter:image" content="http://yoursite.com/2019/04/17/The-server-time-zone-value/exception.png">
     
 
     
@@ -135,19 +136,19 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <a class="page-title-link" href="/categories/生活/">生活</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/生活/菜鸡发言/">菜鸡发言</a>
+    <a class="page-title-link" href="/categories/技术/">技术</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/技术/MySQL/">MySQL</a>
     </h1>
 </div>
 
                         <div class="main-body-content">
-                            <article id="post-还是测试" class="article article-single article-type-post" itemscope="" itemprop="blogPost">
+                            <article id="post-The-server-time-zone-value" class="article article-single article-type-post" itemscope="" itemprop="blogPost">
 	<div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        还是测试
+        The server time zone value &#39;???ú±ê×??±??&#39; is unrecognized or represents more than one time zone
         </h1>
     
 
@@ -157,19 +158,31 @@
             <div class="article-meta">
                 
     <div class="article-date">
-        <a href="/2019/02/27/还是测试/" class="article-date">
-            <time datetime="2019-02-27T10:42:41.000Z" itemprop="datePublished">2019-02-27</time>
+        <a href="/2019/04/17/The-server-time-zone-value/" class="article-date">
+            <time datetime="2019-04-17T09:26:25.000Z" itemprop="datePublished">2019-04-17</time>
         </a>
     </div>
 
 		
 
                 
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/MySQL/">MySQL</a>
+    </div>
+
             </div>	
         
         
         <div class="article-entry" itemprop="articleBody">
-            <p>终于把评论功能给整出来了，它可以没什么用但我必须要有<br>目前用的是LiveRe，不想继续折腾了，valine配置后没反应我能怎么办<br><img src="/2019/02/27/还是测试/2.jpg" alt=""></p>
+            <p><img src="/2019/04/17/The-server-time-zone-value/exception.png" alt=""></p>
+<h2 id="报错信息："><a href="#报错信息：" class="headerlink" title="报错信息："></a>报错信息：</h2><p>SQLException: The server time zone value ‘???ú±ê×??±??’ is unrecognized or represents more than one time zone. You must configure either the server or JDBC driver (via the serverTimezone configuration property) to use a more specifc time zone value if you want to utilize time zone support.</p>
+<h2 id="解决方法："><a href="#解决方法：" class="headerlink" title="解决方法："></a>解决方法：</h2><p><strong>方法一：指定时区</strong></p>
+<p><strong><em>serverTimeZone时区常用值</em></strong><br>    <strong><em>UTC: </em></strong>协调世界时，又称世界统一时间、世界标准时间、国际协调时间。由于英文（CUT）和法文（TUC）的缩写不同，作为妥协，简称UTC。中国时间与UTC的时差为+8，也就是UTC+8。<br>    <strong><em>GMT%2B8: </em></strong>中国时间(GMT+8这种方式支持全部时区，通过修改最后的数字实现，不过%2B不能写成+)<br>    <strong><em>Asia/Shanghai：</em></strong>上海时间</p>
+<p>在数据库连接语句后添加?serverTimezone=Asia/Shanghai</p>
+<p><img src="/2019/04/17/The-server-time-zone-value/result.PNG" alt="连接成功"><br><img src="/2019/04/17/The-server-time-zone-value/dept.png" alt="表dept"><br><code>conn = DriverManager.getConnection(&quot;jdbc:mysql://localhost/mydata?serverTimezone=Asia/Shanghai&amp;user=root&amp;password=root&quot;);</code><br>或<br><code>conn = DriverManager.getConnection(&quot;jdbc:mysql://localhost/mydata?serverTimezone=Asia/Shanghai&quot;,&quot;root&quot;,&quot;root&quot;);</code><br>都行</p>
+<p><strong>方法二：在MySQL中设置时区（默认为SYSTEM）</strong><br>set global time_zone = ‘+8:00’;  修改mysql全局时区为北京时间，即我们所在的东8区<br>set time_zone = ‘+8:00’;  修改当前会话时区<br>没尝试，暂时仅记录</p>
+<p>参考博客：<br><a href="https://www.cnblogs.com/xqz0618/archive/2019/02/14/servertimezoneerror.html" target="_blank" rel="noopener">https://www.cnblogs.com/xqz0618/archive/2019/02/14/servertimezoneerror.html</a><br><a href="https://blog.csdn.net/lin252552/article/details/84375032" target="_blank" rel="noopener">https://blog.csdn.net/lin252552/article/details/84375032</a></p>
 
         </div>
         <footer class="article-footer">
@@ -177,7 +190,7 @@
 
 
 
-    <a data-url="http://yoursite.com/2019/02/27/还是测试/" data-id="cjul0jnxa000m6ov3yxc9af1t" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://yoursite.com/2019/04/17/The-server-time-zone-value/" data-id="cjul0jnwz00076ov3w6kwte1h" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -247,17 +260,17 @@
             "@type": "Person",
             "name": "noviceeee"
         },
-        "headline": "还是测试",
-        "image": "http://yoursite.com/2019/02/27/还是测试/2.jpg",
-        "keywords": "",
-        "genre": "生活 菜鸡发言",
-        "datePublished": "2019-02-27",
-        "dateCreated": "2019-02-27",
-        "dateModified": "2019-04-04",
-        "url": "http://yoursite.com/2019/02/27/还是测试/",
-        "description": "终于把评论功能给整出来了，它可以没什么用但我必须要有目前用的是LiveRe，不想继续折腾了，valine配置后没反应我能怎么办
-"
-        "wordCount": 3
+        "headline": "The server time zone value &#39;???ú±ê×??±??&#39; is unrecognized or represents more than one time zone",
+        "image": "http://yoursite.com/2019/04/17/The-server-time-zone-value/exception.png",
+        "keywords": "MySQL",
+        "genre": "技术 MySQL",
+        "datePublished": "2019-04-17",
+        "dateCreated": "2019-04-17",
+        "dateModified": "2019-04-17",
+        "url": "http://yoursite.com/2019/04/17/The-server-time-zone-value/",
+        "description": "
+报错信息：SQLException: The server time zone value ‘???ú±ê×??±??’ is unrecognized or represents more than one time zone. You must configure either the server or JDBC driver (via the serverTimezone configu"
+        "wordCount": 95
     }
 </script>
 
@@ -295,20 +308,10 @@
         
 <nav id="article-nav">
     
-        <a href="/2019/03/08/Java版坦克大战/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">下一篇</strong>
-        <p class="article-nav-title">
-        
-            Java版坦克大战
-        
-        </p>
-        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
-    </a>
     
-    
-        <a href="/2019/02/14/测试一下/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2019/04/15/自定义函数报错/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">上一篇</strong>
-        <p class="article-nav-title">测试一下</p>
+        <p class="article-nav-title">自定义函数报错ERROR 1418 (HY000)</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
