@@ -68,7 +68,7 @@
                                     <a class="main-nav-list-link" href="/">主页</a>
                                 </li>
                             
-                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/技术/">技术</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/技术/Java/">Java</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/技术/MySQL/">MySQL</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/生活/">生活</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/生活/菜鸡发言/">菜鸡发言</a></li></ul></li></ul>
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/技术/">技术</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/技术/MySQL/">MySQL</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/技术/练习/">练习</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/生活/">生活</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/生活/菜鸡发言/">菜鸡发言</a></li></ul></li></ul>
                                     
                                 <li class="main-nav-list-item">
                                     <a class="main-nav-list-link" href="/about/index.html">关于</a>
@@ -283,7 +283,7 @@
 
         <p class="article-excerpt">
             \g: 等价于分号”;”示例：
-\G: 将查询结果按列打印，即将横向表格纵向输出，方便阅读，也有分号的作用示例1：
+\G: 将查询结果按列打印，即将横向表格纵向输出，方便阅读，也有分号的作用。示例1：
 示例2：
 
         </p>
@@ -332,8 +332,8 @@
 
         <p class="article-excerpt">
             根据教学视频学习如何修改用户密码，然后发生报错：
-原因：mysql 5.7.9以后废弃了password字段和password()函数最简单的解决方法：ALTER USER &#39;root&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;MyNewPass&#39;;
-参考博客：https://www.cnblogs.com/jjg0519/p/9034
+原因：mysql 5.7.9以后废弃了password字段和password()函数。最简单的解决方法：ALTER USER &#39;root&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;MyNewPass&#39;;
+参考博客：https://www.cnblogs.com/jjg0519/p/903
         </p>
     </div>
 </article>
@@ -386,8 +386,8 @@
             学习表子查询时，根据教学视频的思路：
 1.将学生按年龄从大到小排序，得到临时表2.对临时表按班级进行分组,保留每组第一个
 好有道理的样子，然而我输入后：
-看起来不是对排序后的临时表分组，而是对原表分组后选取每组第一条信息，也就是说子查询排序失效了
-原因：MySQL5.6以上在子查询中使用order by 语句后查询结果并不会显示排序后的结果当子查询的order by语句后面没有limit关键字时，
+看起来不是对排序后的临时表分组，而是对原表分组后选取每组第一条信息，也就是说子查询排序失效了。
+原因：MySQL5.6以上在子查询中使用order by 语句后查询结果并不会显示排序后的结果。当子查询的order by语句后面没有limit关键字
         </p>
     </div>
 </article>
@@ -435,7 +435,7 @@
         <p class="article-excerpt">
             
 方法一：1.将学生按年龄从大到小排序，得到临时表2.对临时表按班级进行分组,保留每组第一个
- 但是这个方法存在一个问题：每组只显示一条数据，没有考虑到有同龄人的情况
+ 但是这个方法存在一个问题：每组只显示一条数据，没有考虑到有同龄人的情况。
 方法二：1.将学生按班级分组，并选出每组最大年龄，得到一张包含班级和该班最大年龄的临时表
 2.用inner join连接临时表和学生表，由于表示班级和年龄的字段一样，用using
 
@@ -489,10 +489,10 @@
     
 
         <p class="article-excerpt">
-            将学生按班级分组，然后选取学生姓名和班级
+            将学生按班级分组，然后选取学生姓名和班级。
 
-原因：MySQL 5.7.5后的sql_mode默认是only_full_group_by，用于group by合法性的检查。如果select中的字段没有在group by中出现，那么这个语句是不合法的，会报错（除非字段在聚合函数里面）
-解决方法：1.使用any_value()函数函数作用：禁止ONLY_FULL_GROUP_BY值拒绝具体做法：将导致报
+原因：MySQL 5.7.5后的sql_mode默认是only_full_group_by，用于group by合法性的检查。如果select中的字段没有在group by中出现，那么这个语句是不合法的，会报错（除非字段在聚合函数里面）。
+解决方法：1.使用any_value()函数函数作用：禁止ONLY_FULL_GROUP_BY值拒绝。具体做法：将
         </p>
     </div>
 </article>
@@ -536,6 +536,26 @@
         <h3 class="widget-title">最新文章</h3>
         <div class="widget">
             <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2019/04/30/学生信息管理系统/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/2019/04/30/学生信息管理系统/project.png)" alt="学生信息管理系统" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/技术/">技术</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/技术/练习/">练习</a></p>
+                            <p class="item-title"><a href="/2019/04/30/学生信息管理系统/" class="title">学生信息管理系统</a></p>
+                            <p class="item-date"><time datetime="2019-04-30T10:00:49.000Z" itemprop="datePublished">2019-04-30</time></p>
+                        </div>
+                    </li>
                 
                     <li>
                         
@@ -617,26 +637,6 @@
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2019/03/20/子查询排序失效/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/2019/03/20/子查询排序失效/stu.png)" alt="子查询排序失效" class="thumbnail-image"></span>
-    
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/技术/">技术</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/技术/MySQL/">MySQL</a></p>
-                            <p class="item-title"><a href="/2019/03/20/子查询排序失效/" class="title">子查询排序失效</a></p>
-                            <p class="item-date"><time datetime="2019-03-20T12:56:38.000Z" itemprop="datePublished">2019-03-20</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -646,7 +646,7 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">分类</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/技术/">技术</a><span class="category-list-count">8</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/技术/Java/">Java</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/MySQL/">MySQL</a><span class="category-list-count">7</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/生活/">生活</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/生活/菜鸡发言/">菜鸡发言</a><span class="category-list-count">3</span></li></ul></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/技术/">技术</a><span class="category-list-count">9</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/技术/MySQL/">MySQL</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/练习/">练习</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/生活/">生活</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/生活/菜鸡发言/">菜鸡发言</a><span class="category-list-count">3</span></li></ul></li></ul>
         </div>
     </div>
 
@@ -656,7 +656,7 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">归档</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">四月 2019</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">三月 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">二月 2019</a><span class="archive-list-count">2</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">四月 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">三月 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">二月 2019</a><span class="archive-list-count">2</span></li></ul>
         </div>
     </div>
 
@@ -666,7 +666,7 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">标签</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MySQL/">MySQL</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/练习/">练习</a><span class="tag-list-count">1</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MySQL/">MySQL</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/练习/">练习</a><span class="tag-list-count">2</span></li></ul>
         </div>
     </div>
 

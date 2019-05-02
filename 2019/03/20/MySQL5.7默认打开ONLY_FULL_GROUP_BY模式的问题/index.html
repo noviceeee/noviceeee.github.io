@@ -12,19 +12,19 @@
     
         <meta name="keywords" content="MySQL">
     
-    <meta name="description" content="将学生按班级分组，然后选取学生姓名和班级  原因：MySQL 5.7.5后的sql_mode默认是only_full_group_by，用于group by合法性的检查。如果select中的字段没有在group by中出现，那么这个语句是不合法的，会报错（除非字段在聚合函数里面） 解决方法：1.使用any_value()函数函数作用：禁止ONLY_FULL_GROUP_BY值拒绝具体做法：将导致报">
+    <meta name="description" content="将学生按班级分组，然后选取学生姓名和班级。  原因：MySQL 5.7.5后的sql_mode默认是only_full_group_by，用于group by合法性的检查。如果select中的字段没有在group by中出现，那么这个语句是不合法的，会报错（除非字段在聚合函数里面）。 解决方法：1.使用any_value()函数函数作用：禁止ONLY_FULL_GROUP_BY值拒绝。具体做法：将">
 <meta name="keywords" content="MySQL">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MySQL5.7默认打开ONLY_FULL_GROUP_BY模式的问题">
 <meta property="og:url" content="http://yoursite.com/2019/03/20/MySQL5.7默认打开ONLY_FULL_GROUP_BY模式的问题/index.html">
 <meta property="og:site_name" content="一条咸鱼游啊游">
-<meta property="og:description" content="将学生按班级分组，然后选取学生姓名和班级  原因：MySQL 5.7.5后的sql_mode默认是only_full_group_by，用于group by合法性的检查。如果select中的字段没有在group by中出现，那么这个语句是不合法的，会报错（除非字段在聚合函数里面） 解决方法：1.使用any_value()函数函数作用：禁止ONLY_FULL_GROUP_BY值拒绝具体做法：将导致报">
+<meta property="og:description" content="将学生按班级分组，然后选取学生姓名和班级。  原因：MySQL 5.7.5后的sql_mode默认是only_full_group_by，用于group by合法性的检查。如果select中的字段没有在group by中出现，那么这个语句是不合法的，会报错（除非字段在聚合函数里面）。 解决方法：1.使用any_value()函数函数作用：禁止ONLY_FULL_GROUP_BY值拒绝。具体做法：将">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://yoursite.com/2019/03/20/MySQL5.7默认打开ONLY_FULL_GROUP_BY模式的问题/stu.png">
-<meta property="og:updated_time" content="2019-03-20T12:40:50.752Z">
+<meta property="og:updated_time" content="2019-04-30T13:58:37.345Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MySQL5.7默认打开ONLY_FULL_GROUP_BY模式的问题">
-<meta name="twitter:description" content="将学生按班级分组，然后选取学生姓名和班级  原因：MySQL 5.7.5后的sql_mode默认是only_full_group_by，用于group by合法性的检查。如果select中的字段没有在group by中出现，那么这个语句是不合法的，会报错（除非字段在聚合函数里面） 解决方法：1.使用any_value()函数函数作用：禁止ONLY_FULL_GROUP_BY值拒绝具体做法：将导致报">
+<meta name="twitter:description" content="将学生按班级分组，然后选取学生姓名和班级。  原因：MySQL 5.7.5后的sql_mode默认是only_full_group_by，用于group by合法性的检查。如果select中的字段没有在group by中出现，那么这个语句是不合法的，会报错（除非字段在聚合函数里面）。 解决方法：1.使用any_value()函数函数作用：禁止ONLY_FULL_GROUP_BY值拒绝。具体做法：将">
 <meta name="twitter:image" content="http://yoursite.com/2019/03/20/MySQL5.7默认打开ONLY_FULL_GROUP_BY模式的问题/stu.png">
     
 
@@ -77,7 +77,7 @@
                                     <a class="main-nav-list-link" href="/">主页</a>
                                 </li>
                             
-                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/技术/">技术</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/技术/Java/">Java</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/技术/MySQL/">MySQL</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/生活/">生活</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/生活/菜鸡发言/">菜鸡发言</a></li></ul></li></ul>
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/技术/">技术</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/技术/MySQL/">MySQL</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/技术/练习/">练习</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/生活/">生活</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/生活/菜鸡发言/">菜鸡发言</a></li></ul></li></ul>
                                     
                                 <li class="main-nav-list-item">
                                     <a class="main-nav-list-link" href="/about/index.html">关于</a>
@@ -175,12 +175,12 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            <p><img src="/2019/03/20/MySQL5.7默认打开ONLY_FULL_GROUP_BY模式的问题/stu.png" alt="学生表stu"><br>将学生按班级分组，然后选取学生姓名和班级</p>
+            <p><img src="/2019/03/20/MySQL5.7默认打开ONLY_FULL_GROUP_BY模式的问题/stu.png" alt="学生表stu"><br>将学生按班级分组，然后选取学生姓名和班级。</p>
 <p><img src="/2019/03/20/MySQL5.7默认打开ONLY_FULL_GROUP_BY模式的问题/error.png" alt="报错"></p>
-<h2 id="原因："><a href="#原因：" class="headerlink" title="原因："></a>原因：</h2><p>MySQL 5.7.5后的sql_mode默认是only_full_group_by，用于group by合法性的检查。如果select中的字段没有在group by中出现，那么这个语句是不合法的，会报错（除非字段在聚合函数里面）</p>
-<h2 id="解决方法："><a href="#解决方法：" class="headerlink" title="解决方法："></a>解决方法：</h2><p><strong>1.使用any_value()函数</strong><br>函数作用：禁止ONLY_FULL_GROUP_BY值拒绝<br>具体做法：将导致报错的字段放入any_value()</p>
+<h2 id="原因："><a href="#原因：" class="headerlink" title="原因："></a>原因：</h2><p>MySQL 5.7.5后的sql_mode默认是only_full_group_by，用于group by合法性的检查。如果select中的字段没有在group by中出现，那么这个语句是不合法的，会报错（除非字段在聚合函数里面）。</p>
+<h2 id="解决方法："><a href="#解决方法：" class="headerlink" title="解决方法："></a>解决方法：</h2><p><strong>1.使用any_value()函数</strong><br>函数作用：禁止ONLY_FULL_GROUP_BY值拒绝。<br>具体做法：将导致报错的字段放入any_value()函数。</p>
 <p><img src="/2019/03/20/MySQL5.7默认打开ONLY_FULL_GROUP_BY模式的问题/result.png" alt="分组后每组只保留第一行数据"></p>
-<p><strong>2.关闭only_full_group_by</strong><br>参考博客：<a href="https://www.cnblogs.com/fswhq/p/9729761.html" target="_blank" rel="noopener">https://www.cnblogs.com/fswhq/p/9729761.html</a><br>为了避免随意修改默认设置后产生其他问题，暂时只记录一下</p>
+<p><strong>2.关闭only_full_group_by</strong><br>参考博客：<a href="https://www.cnblogs.com/fswhq/p/9729761.html" target="_blank" rel="noopener">https://www.cnblogs.com/fswhq/p/9729761.html</a><br>为了避免随意修改默认设置后产生其他问题，暂时只记录一下。</p>
 
         </div>
         <footer class="article-footer">
@@ -188,7 +188,7 @@
 
 
 
-    <a data-url="http://yoursite.com/2019/03/20/MySQL5.7默认打开ONLY_FULL_GROUP_BY模式的问题/" data-id="cjul0jnws00026ov3t4vgsl4o" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://yoursite.com/2019/03/20/MySQL5.7默认打开ONLY_FULL_GROUP_BY模式的问题/" data-id="cjv62g29u0000o8v3fm7p85bz" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -264,12 +264,12 @@
         "genre": "技术 MySQL",
         "datePublished": "2019-03-20",
         "dateCreated": "2019-03-20",
-        "dateModified": "2019-03-20",
+        "dateModified": "2019-04-30",
         "url": "http://yoursite.com/2019/03/20/MySQL5.7默认打开ONLY_FULL_GROUP_BY模式的问题/",
-        "description": "将学生按班级分组，然后选取学生姓名和班级
+        "description": "将学生按班级分组，然后选取学生姓名和班级。
 
-原因：MySQL 5.7.5后的sql_mode默认是only_full_group_by，用于group by合法性的检查。如果select中的字段没有在group by中出现，那么这个语句是不合法的，会报错（除非字段在聚合函数里面）
-解决方法：1.使用any_value()函数函数作用：禁止ONLY_FULL_GROUP_BY值拒绝具体做法：将导致报"
+原因：MySQL 5.7.5后的sql_mode默认是only_full_group_by，用于group by合法性的检查。如果select中的字段没有在group by中出现，那么这个语句是不合法的，会报错（除非字段在聚合函数里面）。
+解决方法：1.使用any_value()函数函数作用：禁止ONLY_FULL_GROUP_BY值拒绝。具体做法：将"
         "wordCount": 21
     }
 </script>
@@ -339,6 +339,26 @@
         <h3 class="widget-title">最新文章</h3>
         <div class="widget">
             <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2019/04/30/学生信息管理系统/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/2019/04/30/学生信息管理系统/project.png)" alt="学生信息管理系统" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/技术/">技术</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/技术/练习/">练习</a></p>
+                            <p class="item-title"><a href="/2019/04/30/学生信息管理系统/" class="title">学生信息管理系统</a></p>
+                            <p class="item-date"><time datetime="2019-04-30T10:00:49.000Z" itemprop="datePublished">2019-04-30</time></p>
+                        </div>
+                    </li>
                 
                     <li>
                         
@@ -420,26 +440,6 @@
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2019/03/20/子查询排序失效/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/2019/03/20/子查询排序失效/stu.png)" alt="子查询排序失效" class="thumbnail-image"></span>
-    
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/技术/">技术</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/技术/MySQL/">MySQL</a></p>
-                            <p class="item-title"><a href="/2019/03/20/子查询排序失效/" class="title">子查询排序失效</a></p>
-                            <p class="item-date"><time datetime="2019-03-20T12:56:38.000Z" itemprop="datePublished">2019-03-20</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -449,7 +449,7 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">分类</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/技术/">技术</a><span class="category-list-count">8</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/技术/Java/">Java</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/MySQL/">MySQL</a><span class="category-list-count">7</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/生活/">生活</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/生活/菜鸡发言/">菜鸡发言</a><span class="category-list-count">3</span></li></ul></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/技术/">技术</a><span class="category-list-count">9</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/技术/MySQL/">MySQL</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/练习/">练习</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/生活/">生活</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/生活/菜鸡发言/">菜鸡发言</a><span class="category-list-count">3</span></li></ul></li></ul>
         </div>
     </div>
 
@@ -459,7 +459,7 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">归档</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">四月 2019</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">三月 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">二月 2019</a><span class="archive-list-count">2</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">四月 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">三月 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">二月 2019</a><span class="archive-list-count">2</span></li></ul>
         </div>
     </div>
 
@@ -469,7 +469,7 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">标签</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MySQL/">MySQL</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/练习/">练习</a><span class="tag-list-count">1</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MySQL/">MySQL</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/练习/">练习</a><span class="tag-list-count">2</span></li></ul>
         </div>
     </div>
 
